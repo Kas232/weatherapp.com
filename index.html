@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+
+        <div class="top-bar">
+
+            <h1>🌦 WeatherSphere</h1>
+
+            <button class="theme-btn" onclick="toggleTheme()">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="Search city...">
+
+                <button onclick="getWeather()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </div>
+
+            <button
+                class="location-btn"
+                onclick="getLocationWeather()">
+
+                <i class="fa-solid fa-location-dot"></i>
+                My Location
+
+            </button>
+
+        </div>
+
+        <!-- Loader -->
+
+        <div id="loader" style="display:none;">
+            Loading Weather...
+        </div>
+
+        <!-- Main Weather Card -->
+
+        <div id="weather-box" class="weather-main-card">
+
+            <div class="city-name">
+                City Name
+            </div>
+
+            <div class="weather-icon">
+                ☀️
+            </div>
+
+            <div class="temperature">
+                25°C
+            </div>
+
+            <div class="description">
+                Clear Sky
+            </div>
+
+        </div>
+
+        <!-- Weather Details -->
+
+        <div class="weather-grid">
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-temperature-half"></i>
+
+                <h3>Feels Like</h3>
+
+                <p id="feelsLike">--°C</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-droplet"></i>
+
+                <h3>Humidity</h3>
+
+                <p id="humidity">--%</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-wind"></i>
+
+                <h3>Wind</h3>
+
+                <p id="wind">-- km/h</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-gauge-high"></i>
+
+                <h3>Pressure</h3>
+
+                <p id="pressure">-- hPa</p>
+
+            </div>
+
+        </div>
+
+        <!-- Favourite Cities -->
+
+        <div class="favorites">
+
+            <h2>⭐ Favourite Cities</h2>
+
+            <div class="favorite-buttons">
+
+                <button onclick="quickSearch('Delhi')">
+                    Delhi
+                </button>
+
+                <button onclick="quickSearch('Mumbai')">
+                    Mumbai
+                </button>
+
+                <button onclick="quickSearch('London')">
+                    London
+                </button>
+
+                <button onclick="quickSearch('Dubai')">
+                    Dubai
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Search History -->
+
+        <div class="history" id="history-section">
+
+            <h2>🕒 Recent Searches</h2>
+
+            <ul id="history-list"></ul>
+
+        </div>
+
+        <!-- Forecast -->
+
+        <div class="forecast-section">
+
+            <h2>📅 5-Day Forecast</h2>
+
+            <div id="forecast-box">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
