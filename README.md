@@ -36,11 +36,11 @@ Weather dashboard displaying:
 
 ## ⚙️ Installation
 
-1. Clone the repository
+1. Live at
 
-```bash
-git clone https://github.com/YOUR_USERNAME/WeatherSphere-Pro.git
-```
+
+kas232.github.io/weatherapp.com/
+
 
 2. Open the project folder
 
